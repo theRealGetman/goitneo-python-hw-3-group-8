@@ -137,6 +137,9 @@ class AddressBook(UserDict):
         today = datetime.now().date()
         for contact in self.data.values():
             name = contact.name.value
+
+            if not contact.birthday:
+                continue
             birthday = contact.birthday.value
 
             birthday_this_year = birthday.replace(year=today.year)

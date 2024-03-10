@@ -14,8 +14,6 @@ def hello() -> str:
 def add_contact(args) -> str:
     name, phone = args
 
-    print(f'>>> {address_book} >>> {id(address_book)}')
-
     try:
         record = Record(name)
         record.add_phone(phone)

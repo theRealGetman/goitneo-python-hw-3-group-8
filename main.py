@@ -15,7 +15,6 @@ def main():
         command, *args = parse_input(user_input)
 
         if command in ["close", "exit"]:
-            save_book()
             print(handlers.close())
             break
         elif command == "hello":
@@ -36,6 +35,7 @@ def main():
             print(handlers.birthdays())
         else:
             print(handlers.invalid_command())
+        save_book()
 
 
 if __name__ == "__main__":
